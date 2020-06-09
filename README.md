@@ -1,0 +1,2 @@
+# Customer Attributes GraphQl
+
