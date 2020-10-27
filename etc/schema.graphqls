@@ -1,0 +1,82 @@
+type Query {
+    MpCustomerAttributes(
+        filter: MpCustomerAttributesFilterInput @doc(description: "Identifies which customer attributes to search for and return.")
+        pageSize: Int = 5 @doc(description: "How many items should show on the page?")
+        currentPage: Int = 1 @doc(description: "Allow page number to start with 1")
+    ):MpAttributesOutput @resolver(class: "Mageplaza\\CustomerAttributesGraphQl\\Model\\Resolver\\Attribute\\CustomerAttributes") @doc(description: "The query searches for customer attributes that match the criteria specified in the filter.")
+    MpCustomerAddressAttributes(
+        filter: MpCustomerAttributesFilterInput @doc(description: "Identifies which customer address attributes to search for and return.")
+        pageSize: Int = 5 @doc(description: "How many items should show on the page?")
+        currentPage: Int = 1 @doc(description: "Allow page number to start with 1")
+    ):MpAttributesOutput @resolver(class: "Mageplaza\\CustomerAttributesGraphQl\\Model\\Resolver\\Attribute\\CustomerAddressAttributes") @doc(description: "The query searches for customer address attributes that match the criteria specified in the filter.")
+}
+
+input MpCustomerAttributesFilterInput {
+    attribute_id: FilterTypeInput @doc(description: "Attribute Id")
+    attribute_code: FilterTypeInput @doc(description: "Attribute Code")
+    backend_type: FilterTypeInput @doc(description: "Backend Type")
+    frontend_input: FilterTypeInput @doc(description: "Frontend Input")
+    frontend_label: FilterTypeInput @doc(description: "Frontend Label")
+    is_required: FilterTypeInput @doc(description: "Is Required")
+    default_value: FilterTypeInput @doc(description: "Default Value")
+    input_filter: FilterTypeInput @doc(description: "Input Filter")
+    frontend_class: FilterTypeInput @doc(description: "Frontend Class")
+    note: FilterTypeInput @doc(description: "Note")
+    is_visible: FilterTypeInput @doc(description: "Is Visible")
+    sort_order: FilterTypeInput @doc(description: "Sort Order")
+    is_used_in_grid: FilterTypeInput @doc(description: "Is Used In Grid")
+    is_used_in_sales_order_grid: FilterTypeInput @doc(description: "Is Used Sales Order Grid")
+    field_depend: FilterTypeInput @doc(description: "Field Depend")
+    value_depend: FilterTypeInput @doc(description: "Value Depend")
+    customer_can_edit: FilterTypeInput @doc(description: "Customer Can Edit")
+    mp_store_id: FilterTypeInput @doc(description: "Store Id")
+    mp_customer_group: FilterTypeInput @doc(description: "Customer Group")
+    mp_created_date: FilterTypeInput @doc(description: "Created Date")
+    additional_data: FilterTypeInput @doc(description: "Additional Data")
+    max_file_size: FilterTypeInput @doc(description: "Max File Size")
+    file_extensions: FilterTypeInput @doc(description: "File extensions")
+}
+type MpAttributesOutput {
+    total_count: Int @doc(description: "The total number of results returned when a query is applied"),
+    items: [MpAttributes] @doc(description: "Order attributes data is satisfied")
+}
+
+type MpAttributes {
+    attribute_id: Int @doc(description: "Attribute Id")
+    attribute_code: String @doc(description: "Attribute Code")
+    store_label: String @doc(description: "Store Label")
+    backend_type: String @doc(description: "Backend Type")
+    frontend_input: String @doc(description: "Frontend Input")
+    frontend_label: String @doc(description: "Frontend Label")
+    frontend_class: String @doc(description: "Frontend Class")
+    is_required: Boolean @doc(description: "Is Required")
+    is_user_defined: Boolean @doc(description: "Backend Type")
+    default_value: String @doc(description: "Backend Type")
+    note: String @doc(description: "Backend Type")
+    is_visible: Boolean @doc(description: "Backend Type")
+    input_filter: String @doc(description: "Backend Type")
+    multiline_count: Int @doc(description: "Backend Type")
+    validation_rules: ValidationRulesOutput @doc(description: "Backend Type")
+    is_system: String @doc(description: "Backend Type")
+    sort_order: Int @doc(description: "Backend Type")
+    data_model: String @doc(description: "Backend Type")
+    is_used_in_grid: Boolean @doc(description: "Backend Type")
+    is_visible_in_grid: Boolean @doc(description: "Backend Type")
+    is_filterable_in_grid: Boolean @doc(description: "Backend Type")
+    is_searchable_in_grid: Boolean @doc(description: "Backend Type")
+    is_used_in_sales_order_grid: Boolean @doc(description: "Backend Type")
+    field_depend: String @doc(description: "Backend Type")
+    value_depend: String @doc(description: "Backend Type")
+    customer_can_edit: String @doc(description: "Backend Type")
+    mp_store_id: String @doc(description: "Backend Type")
+    mp_customer_group: String @doc(description: "Backend Type")
+    mp_created_date: String @doc(description: "Backend Type")
+    additional_data: String @doc(description: "Backend Type")
+    max_file_size: String @doc(description: "Backend Type")
+    file_extensions: String @doc(description: "Backend Type")
+}
+
+type ValidationRulesOutput {
+    name: String @doc(description: "Validation Rule Name")
+    value: String @doc(description: "Validation Rule Value")
+}
