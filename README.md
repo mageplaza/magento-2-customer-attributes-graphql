@@ -30,12 +30,12 @@ To perform GraphQL queries in Magento, please do the following requirements:
 
 Click on Run in Postman for add these collections to your workspace quickly.
 
-![Magento 2 blog graphql pwa](https://i.imgur.com/lhsXlUR.gif)
+![Magento 2 customer attributes graphql pwa](https://imgur.com/0lz0vMU.gif)
 
 
 ## 4. Contribute to this module
 
-Feel free to **Fork** and contrinute to this module and create a pull request so we will merge your changes main branch.
+Feel free to **Fork** and contribute to this module and create a pull request so we will merge your changes main branch.
 
 ## 5. Get Support
 
