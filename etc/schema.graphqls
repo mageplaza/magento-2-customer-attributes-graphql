@@ -56,7 +56,7 @@ type MpAttributes {
     is_visible: Boolean @doc(description: "Backend Type")
     input_filter: String @doc(description: "Backend Type")
     multiline_count: Int @doc(description: "Backend Type")
-    validation_rules: ValidationRulesOutput @doc(description: "Backend Type")
+    validation_rules: [ValidationRulesOutput] @doc(description: "Backend Type")
     is_system: String @doc(description: "Backend Type")
     sort_order: Int @doc(description: "Backend Type")
     data_model: String @doc(description: "Backend Type")
