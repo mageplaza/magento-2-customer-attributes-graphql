@@ -28,10 +28,6 @@ To perform GraphQL queries in Magento, please do the following requirements:
 - [Customer Attributes API & examples](https://documenter.getpostman.com/view/10589000/T1DqgH2g?version=latest)
 - [Customer Attributes GraphQL & examples](https://documenter.getpostman.com/view/10589000/TVYJ5GmN)
 
-Click on Run in Postman for add these collections to your workspace quickly.
-
-![Magento 2 customer attributes graphql pwa](https://imgur.com/0lz0vMU.gif)
-
 
 ## 4. Contribute to this module
 

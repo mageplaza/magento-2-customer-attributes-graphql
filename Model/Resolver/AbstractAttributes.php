@@ -33,16 +33,8 @@ use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
  * Class AbstractAttributes
  * @package Mageplaza\CustomerAttributesGraphQl\Model\Resolver
  */
-class AbstractAttributes implements ResolverInterface
+abstract class AbstractAttributes implements ResolverInterface
 {
-    /**
-     * @inheritdoc
-     */
-    public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
-    {
-        // TODO: Implement resolve() method.
-    }
-
     /**
      * @param array $args
      *
