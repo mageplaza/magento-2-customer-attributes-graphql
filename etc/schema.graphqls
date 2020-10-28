@@ -74,6 +74,13 @@ type MpAttributes {
     additional_data: String @doc(description: "Backend Type")
     max_file_size: String @doc(description: "Backend Type")
     file_extensions: String @doc(description: "Backend Type")
+    options: [AttributeOptions] @doc(description: "Options")
+}
+
+type AttributeOptions {
+    label: String @doc(description: "Label")
+    value: String @doc(description: "Value")
+    options: [AttributeOptions] @doc(description: "Options")
 }
 
 type ValidationRulesOutput {
