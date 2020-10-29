@@ -26,7 +26,6 @@ namespace Mageplaza\CustomerAttributesGraphQl\Model\Resolver\Attribute;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\Resolver\Argument\SearchCriteria\Builder as SearchCriteriaBuilder;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
-use Mageplaza\CustomerAttributes\Helper\Data;
 use Mageplaza\CustomerAttributes\Model\CustomerMetadata;
 use \Mageplaza\CustomerAttributesGraphQl\Model\Resolver\AbstractAttributes;
 
@@ -47,25 +46,17 @@ class CustomerAttributes extends AbstractAttributes
     protected $customerAttributeMetadata;
 
     /**
-     * @var Data
-     */
-    protected $helperData;
-
-    /**
      * Attributes constructor.
      *
      * @param SearchCriteriaBuilder $searchCriteriaBuilder
      * @param CustomerMetadata $customerAttributeMetadata
-     * @param Data $helperData
      */
     public function __construct(
         SearchCriteriaBuilder $searchCriteriaBuilder,
-        CustomerMetadata $customerAttributeMetadata,
-        Data $helperData
+        CustomerMetadata $customerAttributeMetadata
     ) {
         $this->searchCriteriaBuilder     = $searchCriteriaBuilder;
         $this->customerAttributeMetadata = $customerAttributeMetadata;
-        $this->helperData                = $helperData;
     }
 
     /**

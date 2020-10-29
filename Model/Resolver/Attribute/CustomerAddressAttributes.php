@@ -26,7 +26,6 @@ namespace Mageplaza\CustomerAttributesGraphQl\Model\Resolver\Attribute;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\Resolver\Argument\SearchCriteria\Builder as SearchCriteriaBuilder;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
-use Mageplaza\CustomerAttributes\Helper\Data;
 use Mageplaza\CustomerAttributes\Model\AddressMetadata;
 use \Mageplaza\CustomerAttributesGraphQl\Model\Resolver\AbstractAttributes;
 
@@ -47,25 +46,17 @@ class CustomerAddressAttributes extends AbstractAttributes
     protected $customerAddressMetadata;
 
     /**
-     * @var Data
-     */
-    protected $helperData;
-
-    /**
      * Attributes constructor.
      *
      * @param SearchCriteriaBuilder $searchCriteriaBuilder
      * @param AddressMetadata $customerAddressMetadata
-     * @param Data $helperData
      */
     public function __construct(
         SearchCriteriaBuilder $searchCriteriaBuilder,
-        AddressMetadata $customerAddressMetadata,
-        Data $helperData
+        AddressMetadata $customerAddressMetadata
     ) {
         $this->searchCriteriaBuilder   = $searchCriteriaBuilder;
         $this->customerAddressMetadata = $customerAddressMetadata;
-        $this->helperData              = $helperData;
     }
 
     /**
