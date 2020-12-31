@@ -51,7 +51,7 @@ To perform GraphQL queries in Magento, please do the following requirements:
 
 Click on Run in Postman to add these collections to your workspace quickly. 
 
-![Magento 2 Auto Related Products graphql pwa](https://i.imgur.com/lhsXlUR.gif)
+![Magento 2 Blog graphql pwa](https://i.imgur.com/lhsXlUR.gif)
 
 ## 4. Contribute to this module
 
